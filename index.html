@@ -11,6 +11,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #0b1020, #050816);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loader-box {
+  text-align: center;
+  color: var(--text);
+}
+
+.loader-box img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin: 0 auto 14px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.loader-box h2 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.loader-box p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.loading-bar {
+  width: 220px;
+  height: 6px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.loading-progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff3d54, #ff7a18, #ffd000);
+  animation: load 2.5s ease forwards;
+}
+
+@keyframes load {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.8; }
+}
     :root{
       --bg:#050816;
       --bg2:#0b1020;
@@ -649,6 +708,18 @@
   </style>
 </head>
 <body>
+<div id="loading-screen">
+  <div class="loader-box">
+    <img src="https://media.discordapp.net/attachments/1092443909667438692/1502329728110166128/VISION_1-removebg-preview.png?ex=69fff9d7&is=69fea857&hm=61789aebf324f99c9c4aae8528904a60ce3e9dd27e01e766d1990f0791c70748&=&format=webp&quality=lossless" alt="VisionVerse Logo">
+
+    <h2>VisionVerse</h2>
+    <p>Loading Website...</p>
+
+    <div class="loading-bar">
+      <div class="loading-progress"></div>
+    </div>
+  </div>
+</div>
 
 <canvas id="particles"></canvas>
 <div class="overlay-glow"></div>
@@ -912,6 +983,17 @@ Celebrate 5 amazing years of VisionVerse with us! Join the community for special
 </footer>
 
 <script>
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("loading-screen").style.opacity = "0";
+    document.getElementById("loading-screen").style.pointerEvents = "none";
+
+    setTimeout(() => {
+      document.getElementById("loading-screen").remove();
+    }, 500);
+  }, 2500);
+});
+
   // Mobile menu
   const menuBtn = document.getElementById('menuBtn');
   const navLinks = document.getElementById('navLinks');
