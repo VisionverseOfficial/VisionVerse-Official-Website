@@ -741,7 +741,6 @@
       <nav class="nav-links" id="navLinks">
         <a href="#about">About</a>
         <a href="#rules">Rules</a>
-        <a href="#events">Events</a>
         <a href="#news">News</a>
         <a href="#staff">Staff</a>
         <a href="#join">Join</a>
@@ -759,7 +758,7 @@
           <h2>Dream. Build. Vision.</h2>
           <p>
             Welcome to VisionVerse, the official community space for events, updates,
-            staff info,and the 5th Anniversary celebration.
+            staff info,and Announcements.
           </p>
 
           <div class="hero-actions">
@@ -790,19 +789,7 @@
           <img src="https://github.com/VisionverseOfficial/VisionVerse-Assets/blob/main/2b5e9b3c-453a-485d-bbfe-962b06f1dd37.png?raw=true" alt="VisionVerse 5th Anniversary Banner">
         </div>
 
-        <div class="mini-card glass">
-          <div class="badge"><i></i> Countdown to 5th Anniversary</div>
-          <h3>VisionVerse 5th Anniversary</h3>
-          <p>🎉 VisionVerse 5th Anniversary 🎉
-
-Celebrate 5 amazing years of VisionVerse with us! Join the community for special events, giveaways, and surprises as we look back on our journey and move into the future.
-
-✨ Don’t miss it — be part of the celebration!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
+        </main>
 
 <section id="about" class="section">
   <div class="container">
@@ -847,43 +834,7 @@ Celebrate 5 amazing years of VisionVerse with us! Join the community for special
   </div>
 </section>
 
-<section id="events" class="section">
-  <div class="container">
-    <div class="badge"><i></i> Events</div>
-    <h2 class="section-title">Events & Countdown</h2>
-    <p class="section-subtitle">Celebrate 5 amazing years of VisionVerse with us! Join the community for special events, giveaways, and surprises as we look back on our journey and move into the future.</p>
-
-    <div class="grid-2">
-      <div class="card countdown-wrap">
-        <div class="countdown-banner">
-  <img src="https://github.com/VisionverseOfficial/VisionVerse-Assets/blob/main/2b5e9b3c-453a-485d-bbfe-962b06f1dd37.png?raw=true" alt="VisionVerse 5th Anniversary Banner">
-</div>
-        <div class="countdown-content">
-          <div class="badge"><i></i> VisionVerse 5th Anniversary </div>
-          <h3>Time left until the celebration</h3>
-          <p id="countdownText">Loading countdown...</p>
-
-          <div class="timer" aria-label="countdown timer">
-            <div class="time-box"><strong id="days">00</strong><span>Days</span></div>
-            <div class="time-box"><strong id="hours">00</strong><span>Hours</span></div>
-            <div class="time-box"><strong id="minutes">00</strong><span>Minutes</span></div>
-            <div class="time-box"><strong id="seconds">00</strong><span>Seconds</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Upcoming Activities</h3>
-        <ul class="list" style="margin-top:14px">
-          <li>• Huge giveaway and lucky draw</li>
-          <li>• Art contest and creative submissions</li>
-          <li>• Fun minigames for members</li>
-          <li>• Special anniversary updates and announcements</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+\
 
 <section id="news" class="section">
   <div class="container">
@@ -1083,33 +1034,7 @@ window.addEventListener("load", () => {
   initParticles();
   animateParticles();
 
-  // Countdown to VisionVerse 5th Anniversary
-  const targetDate = new Date('2026-05-14T00:00:00').getTime();
-
-  function updateCountdown() {
-    const now = Date.now();
-    const diff = Math.max(0, targetDate - now);
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    document.getElementById('days').textContent = String(days).padStart(2, '0');
-    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-
-    const countdownText = document.getElementById('countdownText');
-    if (diff === 0) {
-      countdownText.textContent = 'The VisionVerse 5th Anniversary is now live!';
-    } else {
-      countdownText.textContent = 'Counting down to the VisionVerse 5th Anniversary celebration.';
-    }
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
+  
 
   // News system
   const newsItems = [
