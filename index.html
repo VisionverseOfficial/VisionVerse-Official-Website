@@ -218,11 +218,11 @@
     }
 
     .hero-grid{
-      display:grid;
-      grid-template-columns: 1.25fr .95fr;
-      gap:22px;
-      align-items:stretch;
-    }
+  display:grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap:22px;
+  align-items:stretch;
+}
 
     .hero-main{
       position:relative;
@@ -752,19 +752,56 @@
 <main id="home" class="hero">
   <div class="container">
     <div class="hero-grid">
-      <section class="hero-main glass">
-        <div class="hero-content">
-          <div class="eyebrow"><span class="dot"></span> VisionVerse Official</div>
-          <h2>Dream. Build. Vision.</h2>
-          <p>
-            Welcome to VisionVerse, the official community space for events, updates,
-            staff info,and Announcements.
-          </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#join">Join the Community</a>
-            <a class="btn" href="#events">See Anniversary Event</a>
-          </div>
+  <!-- MAIN CARD -->
+  <section class="hero-main glass">
+    <div class="hero-content">
+      <div class="eyebrow"><span class="dot"></span> VisionVerse Official</div>
+
+      <h2>Dream. Build. Vision.</h2>
+
+      <p>
+        Welcome to VisionVerse, the official community space for events, updates,
+        staff info, and announcements.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#join">Join the Community</a>
+        <a class="btn" href="#nitro">See Events</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIDE CARDS -->
+  <div class="hero-graphic">
+
+    <!-- PREVIOUS EVENT -->
+    <div class="mini-card glass">
+      <h3>📅 Previous Event</h3>
+      <p>
+        VisionVerse Anniversary Celebration 2026 🎉  
+        A successful community event with updates, staff showcase & giveaways.
+      </p>
+      <span class="badge">✔ Completed</span>
+    </div>
+
+    <!-- COMING SOON EVENT -->
+    <div class="mini-card glass">
+      <h3>🚀 Coming Soon Event</h3>
+      <p>
+        🎁 Discord Nitro Giveaway Event  
+        Starts soon — join the Discord to participate and win rewards!
+      </p>
+      <span class="badge">⏳ Upcoming</span>
+
+      <div style="margin-top:12px;">
+        <a class="btn btn-primary" href="#nitro">View Countdown</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
 
           <div class="grid-3" style="margin-top:18px">
             <div class="card">
@@ -783,11 +820,8 @@
         </div>
       </section>
 
-      <div class="hero-graphic">
-        <div class="brand-banner glass">
-          <!-- Replace this with your VisionVerse anniversary banner file -->
-          <img src="https://github.com/VisionverseOfficial/VisionVerse-Assets/blob/main/2b5e9b3c-453a-485d-bbfe-962b06f1dd37.png?raw=true" alt="VisionVerse 5th Anniversary Banner">
-        </div>
+
+      
 
         </main>
 
@@ -835,7 +869,77 @@
 </section>
 
 \
+<!-- NITRO GIVEAWAY MINI CARD + COUNTDOWN -->
 
+<section id="nitro" class="section">
+  <div class="container">
+
+    <div class="badge">
+      <i></i> Nitro Giveaway
+    </div>
+
+    <div class="grid-2">
+
+      <!-- MINI CARD -->
+      <div class="card">
+        <h3>🎁 Discord Nitro Giveaway</h3>
+        <p>
+          Join our Discord Nitro Giveaway!  
+          Win free Nitro by participating in community events and announcements.
+        </p>
+
+        <div class="input-row">
+          <a class="btn btn-primary"
+             href="https://discord.gg/hcPRCMdpjH"
+             target="_blank">
+            🎉 Join Giveaway
+          </a>
+        </div>
+      </div>
+
+      <!-- COUNTDOWN CARD -->
+      <div class="card countdown-wrap">
+
+        <div class="countdown-banner">
+          <img src="https://github.com/VisionverseOfficial/VisionVerse-Assets/blob/main/ChatGPT%20Image%20Jun%2020,%202026,%2004_37_55%20PM.png?raw=true">
+        </div>
+
+        <div class="countdown-content">
+
+          <h2 class="section-title">⏳ Nitro Giveaway Countdown</h2>
+
+          <p class="section-subtitle">
+            Giveaway ends soon — don’t miss your chance!
+          </p>
+
+          <div class="timer">
+            <div class="time-box">
+              <strong id="nitroDays">00</strong>
+              <span>Days</span>
+            </div>
+
+            <div class="time-box">
+              <strong id="nitroHours">00</strong>
+              <span>Hours</span>
+            </div>
+
+            <div class="time-box">
+              <strong id="nitroMinutes">00</strong>
+              <span>Minutes</span>
+            </div>
+
+            <div class="time-box">
+              <strong id="nitroSeconds">00</strong>
+              <span>Seconds</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 <section id="news" class="section">
   <div class="container">
     <div class="badge"><i></i> News</div>
@@ -874,19 +978,19 @@
 
     <div class="staff-grid">
       <article class="card staff-card">
-        <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-C775C7C357F13B2655E41B4BD30C63A1-Png/150/150/AvatarHeadshot/Webp/noFilter" alt="Owner">
+        <img src="https://github.com/VisionverseOfficial/VisionVerse-Assets/blob/main/noFilter%20(2).webp?raw=true" alt="Owner">
         <h3>Clifford</h3>
         <p>Owner</p>
         <span class="role">Community Leader</span>
       </article>
       <article class="card staff-card">
-        <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-4C25EADC119594DFF843C65F3F08633B-Png/150/150/AvatarHeadshot/Webp/noFilter" alt="Moderator">
+        <img src="https://github.com/VisionverseOfficial/VisionVerse-Assets/blob/main/noFilter%20(1).webp?raw=true" alt="Moderator">
         <h3>Zach</h3>
         <p>Executive Director</p>
         <span class="role">Community Support</span>
       </article>
       <article class="card staff-card">
-        <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-63E9BEBE8E415ED19BDA4F70CC7EAF8C-Png/150/150/AvatarHeadshot/Webp/noFilter" alt="Developer">
+        <img src="https://github.com/VisionverseOfficial/VisionVerse-Assets/blob/main/noFilter.webp?raw=true" alt="Developer">
         <h3>Blossom</h3>
         <p>Side Director</p>
         <span class="role">Website & Game</span>
@@ -1034,14 +1138,118 @@ window.addEventListener("load", () => {
   initParticles();
   animateParticles();
 
-  
+  // =============================
+// Nitro Giveaway Countdown
+// =============================
+
+
+const nitroEndDate =
+new Date("June 30, 2026 20:00:00").getTime();
+
+
+
+function updateNitroCountdown(){
+
+
+const now = new Date().getTime();
+
+
+const distance = nitroEndDate - now;
+
+
+
+if(distance <= 0){
+
+
+document.getElementById("nitroDays").innerHTML="00";
+
+document.getElementById("nitroHours").innerHTML="00";
+
+document.getElementById("nitroMinutes").innerHTML="00";
+
+document.getElementById("nitroSeconds").innerHTML="00";
+
+
+return;
+
+}
+
+
+
+
+const days =
+Math.floor(distance /
+(1000 * 60 * 60 * 24));
+
+
+
+const hours =
+Math.floor(
+(distance %
+(1000 * 60 * 60 * 24))
+/
+(1000 * 60 * 60)
+);
+
+
+
+const minutes =
+Math.floor(
+(distance %
+(1000 * 60 * 60))
+/
+(1000 * 60)
+);
+
+
+
+const seconds =
+Math.floor(
+(distance %
+(1000 * 60))
+/
+1000
+);
+
+
+
+document.getElementById("nitroDays").innerHTML =
+String(days).padStart(2,"0");
+
+
+
+document.getElementById("nitroHours").innerHTML =
+String(hours).padStart(2,"0");
+
+
+
+document.getElementById("nitroMinutes").innerHTML =
+String(minutes).padStart(2,"0");
+
+
+
+document.getElementById("nitroSeconds").innerHTML =
+String(seconds).padStart(2,"0");
+
+
+
+}
+
+
+
+setInterval(updateNitroCountdown,1000);
+
+updateNitroCountdown();
+
+
+// =============================
 
   // News system
   const newsItems = [
     {
-      title: 'VisionVerse 5th Anniversary Announced',
-      date: '14 May 2026',
-      text: 'The anniversary event banner is now placed on the website countdown section.'
+      title: 'VisionVerse Nitro Giveaway!',
+      date: '30 June 2026',
+      text: 'The Giveaway Begins in 10 Days — Are You Ready?'
     },
     {
       title: 'Website Upgrade In Progress',
@@ -1060,6 +1268,7 @@ window.addEventListener("load", () => {
   newsList.innerHTML = newsItems.map(item => `
     <article class="news-item">
       <div class="top">
+
         <h3>${item.title}</h3>
         <span class="date">${item.date}</span>
       </div>
